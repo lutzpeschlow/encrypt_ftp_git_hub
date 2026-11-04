@@ -1,0 +1,5 @@
+{
+  "Operation":"DECODE",
+  "InputFile":"test.enc",
+  "OutputFile":"test2.txt"
+}

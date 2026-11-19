@@ -23,6 +23,7 @@ import (
 //   - output file
 type Control struct {
 	Operation  string `json:"operation"`
+	Keyfile    string `json:"keyfile"`
 	InputFile  string `json:"inputfile"`
 	OutputFile string `json:"outputfile"`
 }
@@ -170,11 +171,12 @@ func main() {
 	fmt.Printf("Input:     %s\n", ctrl.InputFile)
 	fmt.Printf("Output:    %s\n", ctrl.OutputFile)
 	// key for encryption
-	key, err := loadKey("c:/tmp/key.txt")
+	key, err := loadKey(ctrl.Keyfile)
 	if err != nil {
 		fmt.Fprintln(os.Stderr, "Key Error:", err)
 		os.Exit(1)
 	}
+	fmt.Println(key)
 
 	// (1)
 	// ENCODE

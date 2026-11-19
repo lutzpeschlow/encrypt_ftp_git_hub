@@ -1,5 +1,6 @@
 {
-  "Operation":"DECODE",
-  "InputFile":"test.enc",
-  "OutputFile":"test2.txt"
+  "Operation":"ENCODE",
+  "Keyfile":"/tmp/c.txt",
+  "InputFile":"/tmp/to_cornelia.m4a",
+  "OutputFile":"/tmp/to_cornelia.enc"
 }
